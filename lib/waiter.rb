@@ -23,8 +23,8 @@ class Waiter
 
   def new_meal(customer, total, tip)
     new_meal = Meal.new(self, customer, total, tip)
-    binding.pry
     @meals << new_meal
+    binding.pry    
     @@all << new_meal
   end
 
