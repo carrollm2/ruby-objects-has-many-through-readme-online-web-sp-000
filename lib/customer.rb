@@ -1,3 +1,5 @@
+require 'pry'
+
 class Customer
   attr_accessor :name, :age, :meals
 
@@ -16,6 +18,7 @@ class Customer
   end
 
   def new_meal(waiter)
+    binding.pry
     new_meal = Meal.new(waiter, self, total, tip)
     @meals << new_meal
     @waiters << new_meal.waiter
