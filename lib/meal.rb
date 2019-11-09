@@ -10,6 +10,7 @@ class Meal
     @total = total
     @tip = tip
     @@all << self
+    waiter.meals << self
   end
 
 
