@@ -1,7 +1,7 @@
 require 'pry'
 
 class Customer
-  attr_accessor :name, :age, :meals, :new_meal
+  attr_accessor :name, :age, :meals
 
   @@all = []
 
@@ -18,9 +18,9 @@ class Customer
   end
 
   def new_meal(waiter, total, tip)
-    self.new_meal = Meal.new(waiter, total, tip)
-    @meals << self.new_meal
-    @waiters << self.new_meal.waiter
+    new_meal = Meal.new(waiter, total, tip)
+    @meals << new_meal
+    @waiters << new_meal.waiter
   end
 
   def meals
