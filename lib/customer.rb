@@ -17,8 +17,7 @@ class Customer
     @@all
   end
 
-  def new_meal(waiter)
-    binding.pry
+  def new_meal
     new_meal = Meal.new(waiter, self, total, tip)
     @meals << new_meal
     @waiters << new_meal.waiter
